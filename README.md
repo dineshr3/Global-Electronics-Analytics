@@ -48,18 +48,44 @@ Designed interactive dashboards with slicers and visuals to explore:
 
 ```DAX
 -- Total Revenue
-Total Revenue = SUM(Sales[Quantity] * Sales[UnitPrice])
+-- Total Revenue = 
+SUMX (
+    new_sales_modified,
+    new_sales_modified[Quantity] *
+    RELATED(product_modified[Unit Price USD]) *
+    RELATED(recent_exchange_rates[Exchange])
+)
 
 -- Total Profit
-Total Profit = SUM(Sales[Quantity] * (Sales[UnitPrice] - Sales[UnitCost]))
+-- Total Profit = 
+SUMX (
+    new_sales_modified,
+    new_sales_modified[Quantity] *
+    ( RELATED(product_modified[Unit Price USD]) - RELATED(product_modified[Unit Cost USD]) ) *
+    RELATED(recent_exchange_rates[Exchange])
+)
+
 
 -- Total Orders
-Total Orders = COUNTROWS(Sales)
+Total Orders = 
+COUNT( new_sales_modified[Order Number] )
 
--- Previous Month Revenue / Profit / Orders
-Previous Month Revenue = CALCULATE([Total Revenue], DATEADD(Calendar[Date], -1, MONTH))
-Previous Month Profit = CALCULATE([Total Profit], DATEADD(Calendar[Date], -1, MONTH))
-Previous Month Orders = CALCULATE([Total Orders], DATEADD(Calendar[Date], -1, MONTH))
+-- Prev Month Revenue = 
+CALCULATE (
+    [Total Revenue],
+    DATEADD ( 'Calendar Lookup'[Date], -1, MONTH )
+)
+-- Prev Month Profit = 
+CALCULATE (
+    [Total Profit],
+    DATEADD ( 'Calendar Lookup'[Date], -1, MONTH )
+)
+
+-- Prev Month Orders = 
+CALCULATE (
+    [Total Orders],
+    DATEADD ( 'Calendar Lookup'[Date], -1, MONTH )
+)
 
 -- Price Adjustment Parameter
 Price Adjustment = GENERATESERIES(-0.1, 0.1, 0.01)  -- ±10% adjustment
