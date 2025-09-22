@@ -64,38 +64,6 @@ Previous Month Orders = CALCULATE([Total Orders], DATEADD(Calendar[Date], -1, MO
 -- Price Adjustment Parameter
 Price Adjustment = GENERATESERIES(-0.1, 0.1, 0.01)  -- ±10% adjustment
 ```
-## ✅ Outcome
-
-With this pipeline, the project demonstrates how SQL preprocessing + Power BI analytics can provide valuable insights for decision-making, including:
-
-- **Total Revenue:** $83.73M
-- **Total Orders:** 127K
-- **Total Profit:** $39.76M
-- **Total Customers:** 15K+
-- **Total Products:** 2,517+
-- **Category-wise Quantity:** Home Appliances, Computers, Cameras, Cell Phones, TV & Video, Audio, Games, Music
-- **Customer demographics:** Gender distribution (Male/Female)
-- **Regional insights:** Orders per country and continent
-- **Monthly KPIs:** Orders, Revenue, Profit vs goals (+% improvement)
-- **Interactive Price Adjustment** simulation for revenue/profit forecasting
-
-## 📸 Screenshots
-
-- **Main Dashboard**  
-<img width="1088" height="611" alt="image" src="https://github.com/user-attachments/assets/2fd142e4-679c-4247-b835-58fd77235d4a" />
-
-
-- **Overview Dashboard**  
-<img width="1087" height="614" alt="image" src="https://github.com/user-attachments/assets/999a2927-7020-4e01-9acf-b320bd58efbe" />
-
-
-- **Analysis Dashboard**  
-<img width="1085" height="613" alt="image" src="https://github.com/user-attachments/assets/c73a486a-464a-4750-8e40-5f36ff18d31b" />
-
-
-- **Custom Tooltip Dashboard**  
-<img width="436" height="182" alt="image" src="https://github.com/user-attachments/assets/0233ee7e-1cc5-41fe-b4b8-7cefa5e8545f" />
-
 
 ## 🔧 How to Run
 
