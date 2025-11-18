@@ -2,7 +2,8 @@
 
 ## 📌 Project Overview
 
-**This Power BI project analyzes six years of sales, customer behavior, product performance, and delivery efficiency across global regions such as North America, Europe, and Australia. The dashboard is designed to help business leaders quickly understand overall performance and give regional managers the insights they need to make better decisions. One key part of the report is Average Delivery Days (4.53 days), which helps track operational efficiency and customer experience. Combined with sales and customer insights, it offers a holistic view of how the business performs end-to-end.**
+This Power BI project analyzes six years of sales, customer behavior, product performance, and delivery efficiency across global regions such as North America, Europe, and Australia. The dashboard is designed to help business leaders quickly understand overall performance and give regional managers the insights they need to make better decisions. One key part of the report is Average Delivery Days (4.53 days), which helps track operational efficiency and customer experience. Combined with sales and customer insights, it offers a holistic view of how the business performs end-to-end.
+
 ---
 
 ## 🗄 SQL Data Preparation
